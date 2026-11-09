@@ -25,7 +25,10 @@ Everything the weekly posting task needs. Posters are 1080x1350 PNG/JPG feed ima
    Reels: `type="reel", video_id=…, cover_id=…`; optional `collaborators="username"` (Instagram only).
 
 ## Product photos
-`img/` holds the product photos available here. The store site can't be reached from the workspace, so new product photos must be added to `img/` (or the task can use `product_id` in `social_post_create` to post a product's main photo as-is).
+- `products/` is refreshed from openwood.pk by the GitHub workflow `Fetch product images` (Saturdays 12:00 PKT, before the posting task). `products/products.json` lists every product (id, name, slug, url, categories, short_description, images). Each product folder holds ALL its gallery images (`01.jpg`, `02.jpg`, …; 01 is the main photo).
+- The workspace can't reach openwood.pk directly; to refresh mid-week, edit `kit/refresh.txt` and push — the workflow runs on that push.
+- `img/` holds extra hand-picked photos.
+- **Rotate gallery images:** every product has several photos. Never reuse an image file already listed in `posting-log.md`; pick the next unused one in that product's folder (lifestyle/in-room shots first, then detail shots). Only reuse once all images of that product have been used.
 
 ## Log
-`posting-log.md` lists every post scheduled, so products and angles rotate.
+`posting-log.md` lists every post scheduled, with the source image file(s) used, so products, angles and images rotate.
