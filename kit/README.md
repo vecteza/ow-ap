@@ -15,6 +15,8 @@ Everything the weekly posting task needs. Posters are 1080x1350 PNG/JPG feed ima
 - Captions: short hook, 2–4 benefit lines, "🛒 openwood.pk", Cash on Delivery line when useful, 6–9 hashtags incl. #openwood. No prices unless it's a price-hook post.
 - Assembly visuals: show the golden threaded screw inserts where screws go into wood.
 - Never use copyrighted characters/brands in designs.
+- **Review posts (from Usman, 15 Nov 2026):** always show the customer's own uploaded photos as a collage of tiles laid over the main product image (see poster 08 in `gen_2026-11-16.py`, `.cp` styles). Photos are in `reviews/<product-slug>/<author>-NN.jpg` (index: `reviews/reviews.json`, refreshed by the same workflow). Prefer reviews that have photos; use only the quoted reviewer's photos; Read each photo first and crop out anything unsuitable (faces, address labels, copyrighted characters on screens). If the reviewer uploaded no photos, pick another review that has them where possible.
+- **Different image every time (from Usman, 15 Nov 2026):** every poster must use a product gallery image that has never been used before (check `posting-log.md`), and no two posters in the same week may share an image. This applies to review posts' main image too.
 
 ## Publishing pipeline
 1. Render posters to `posters/YYYY-MM/` (JPG, quality ~80).

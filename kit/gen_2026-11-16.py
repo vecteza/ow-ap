@@ -60,9 +60,15 @@ blockquote em{font-style:normal;color:var(--red)}
 .by{margin-top:30px;padding-top:26px;border-top:2px solid rgba(244,239,232,.16);display:flex;justify-content:space-between;align-items:center;font-size:24px;font-weight:600;color:rgba(244,239,232,.7)}
 .by b{color:#fff}
 .by .url{color:#fff}
+.cp{position:absolute;right:56px;top:560px;width:600px;height:340px}
+.cp i{position:absolute;width:280px;height:280px;border:8px solid #fff;border-radius:18px;box-shadow:0 18px 40px rgba(0,0,0,.45);background-repeat:no-repeat}
+.cp .a{left:0;top:44px;width:340px;transform:rotate(-3deg);background-image:url(reviews/modular-office-table/zeeshanghanchi-02.jpeg);background-size:678px auto;background-position:0 -186px}
+.cp .b{left:352px;top:24px;width:244px;transform:rotate(3deg);background-image:url(reviews/modular-office-table/zeeshanghanchi-01.jpeg);background-size:cover;background-position:50% 50%}
+.cp span{position:absolute;right:0;top:-22px;font-size:19px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;background:var(--red);color:#fff;padding:9px 16px;border-radius:999px;z-index:2}
 """, f"""
 <div class="ph"></div>
 <div class="top"><div class="logo w">{LOGO}</div><div class="pill">Customer love</div></div>
+<div class="cp"><span>Zeeshan&rsquo;s photos</span><i class="a"></i><i class="b"></i></div>
 <div class="q">
  <div class="stars">★★★★★</div>
  <blockquote>&ldquo;The quality and overall finish are <em>outstanding</em>, exactly as shown in the pictures.&rdquo;</blockquote>
