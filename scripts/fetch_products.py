@@ -31,10 +31,31 @@ for p in items:
 json.dump(index, open(os.path.join(OUT, "products.json"), "w"), indent=1, ensure_ascii=False)
 print(len(index), "products")
 
-# --- temporary probe: how are customer review photos exposed? ---
-os.makedirs(os.path.join(OUT, "_probe"), exist_ok=True)
-for slug, pid in [("modular-office-table", 17733), ("modular-desk-shelf", 17743)]:
-    for name, url in [(f"{slug}.html", f"https://openwood.pk/product/{slug}/"),
-                      (f"{slug}-reviews.json", f"https://openwood.pk/wp-json/wc/store/v1/products/reviews?product_id={pid}&per_page=20")]:
-        try: open(os.path.join(OUT, "_probe", name), "wb").write(get(url))
-        except Exception as e: print("probe fail", url, e)
+# --- customer review photos (shown on product pages as <img alt="Customer photo from USER">) ---
+ROUT = "kit/reviews"
+rindex = []
+for p in index:
+    try: page = get(p["url"]).decode("utf-8", "replace")
+    except Exception as e: print("page fail", p["url"], e); continue
+    seen, count = set(), {}
+    for tag in re.findall(r"<img[^>]+>", page):
+        m = re.search(r'alt="Customer photo from ([^"]+)"', tag); u = re.search(r'src="([^"]+)"', tag)
+        if not (m and u) or u.group(1) in seen: continue
+        seen.add(u.group(1))
+        author = re.sub(r"[^A-Za-z0-9_.-]", "_", html.unescape(m.group(1)))
+        thumb = u.group(1); full = re.sub(r"-\d+x\d+(\.\w+)$", r"\1", thumb)
+        ext = os.path.splitext(thumb.split("?")[0])[1].lower() or ".jpg"
+        count[author] = count.get(author, 0) + 1
+        d = os.path.join(ROUT, p["slug"]); os.makedirs(d, exist_ok=True)
+        fn = os.path.join(d, f"{author}-{count[author]:02d}{ext}")
+        if not os.path.exists(fn):
+            data = None
+            for src in (full, thumb):
+                try: data = get(src); break
+                except Exception as e: print("skip", src, e)
+            if data is None: continue
+            open(fn, "wb").write(data)
+        rindex.append({"product_id": p["id"], "slug": p["slug"], "author": html.unescape(m.group(1)), "file": fn})
+os.makedirs(ROUT, exist_ok=True)
+json.dump(rindex, open(os.path.join(ROUT, "reviews.json"), "w"), indent=1, ensure_ascii=False)
+print(len(rindex), "customer review photos")
