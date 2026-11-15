@@ -30,3 +30,11 @@ for p in items:
                   "images": files})
 json.dump(index, open(os.path.join(OUT, "products.json"), "w"), indent=1, ensure_ascii=False)
 print(len(index), "products")
+
+# --- temporary probe: how are customer review photos exposed? ---
+os.makedirs(os.path.join(OUT, "_probe"), exist_ok=True)
+for slug, pid in [("modular-office-table", 17733), ("modular-desk-shelf", 17743)]:
+    for name, url in [(f"{slug}.html", f"https://openwood.pk/product/{slug}/"),
+                      (f"{slug}-reviews.json", f"https://openwood.pk/wp-json/wc/store/v1/products/reviews?product_id={pid}&per_page=20")]:
+        try: open(os.path.join(OUT, "_probe", name), "wb").write(get(url))
+        except Exception as e: print("probe fail", url, e)
