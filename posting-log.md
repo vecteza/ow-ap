@@ -10,4 +10,4 @@
 | 2026-11-17 | Photo | Wall range (shelf, keys, clothes hanger) | Small space, go vertical | posters/2026-11/05-go-vertical-wall-range.jpg | kit/img (legacy) |
 | 2026-11-19 | Photo | Under Desk Cable Tray | Hide cable chaos | posters/2026-11/06-cable-tray.jpg | kit/img (legacy) |
 | 2026-11-16 | Photo | Kids Study Desk | Kids range: a desk of their own | posters/2026-11/07-kids-study-desk.jpg | kit/products/kids-study-desk/01.png |
-| 2026-11-21 | Photo | Modular Office Table | Customer review (Zeeshan, 5★, review 68003) | posters/2026-11/08-review-modular-office-table.jpg | kit/products/modular-office-table/04.png + customer photos kit/reviews/modular-office-table/zeeshanghanchi-01.jpeg, zeeshanghanchi-02.jpeg |
+| 2026-11-21 | Photo | Modular Office Table | Customer review (Ismaeel, 5★, review 67915) | posters/2026-11/08-review-modular-office-table.jpg | kit/products/modular-office-table/04.png + customer photos kit/reviews/modular-office-table/ismaeelabbasi71-01.jpeg, -02.jpeg, -03.jpeg |
