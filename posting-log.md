@@ -11,3 +11,8 @@
 | 2026-11-19 | Photo | Under Desk Cable Tray | Hide cable chaos | posters/2026-11/06-cable-tray.jpg | kit/img (legacy) |
 | 2026-11-16 | Photo | Kids Study Desk | Kids range: a desk of their own | posters/2026-11/07-kids-study-desk.jpg | kit/products/kids-study-desk/01.png |
 | 2026-11-21 | Photo | Modular Office Table | Customer review (Ismaeel, 5★, review 67915) | posters/2026-11/08-review-modular-office-table.jpg | kit/products/modular-office-table/04.png + customer photos kit/reviews/modular-office-table/ismaeelabbasi71-01.jpeg, -02.jpeg, -03.jpeg |
+| 2026-11-20 | Reel | Hamza desk setup tour (Modular Office Table + Modular Desk Shelf) | Room setup / desk tour (post 24628, logged retroactively) | reels/2026-11/hamza-desk-setup-reel.mp4 | customer video |
+| 2026-11-23 | Photo | Built-In Desk Mini | Small space: tight corner, it fits (post 24643) | posters/2026-11/09-small-space-built-in-desk-mini.jpg | kit/products/built-in-desk-mini/01.png |
+| 2026-11-25 | Photo | Laptop Stand | Customer review (Hussnain, 5★, review 73239) (post 24644) | posters/2026-11/10-review-laptop-stand.jpg | kit/products/openwood-laptop-stand/01.png + customer photos kit/reviews/openwood-laptop-stand/hussnainhashmi562-01.jpg, -02.jpg, -03.jpg |
+| 2026-11-27 | Photo | Kids Learning Tower | Kids range: little helper, counter height (post 24645) | posters/2026-11/11-kids-learning-tower.jpg | kit/products/kids-learning-tower/01.png |
+| 2026-11-29 | Photo | Flat Pack Coffee Table | Room setup: living room (post 24646) | posters/2026-11/12-living-room-flat-pack-coffee-table.jpg | kit/products/flat-pack-coffee-table/01.png |
